@@ -3,10 +3,10 @@ var arr = [];
 // nhập số N
 function addNumber() {
   //input = number
-  var number = parseInt(document.getElementById("input-number").value);
+  var number = parseInt(document.getElementById("inputNumber").value);
   arr.push(number);
   //output
-  document.getElementById("number-list").innerHTML = arr.join(", ");
+  document.getElementById("numberList").innerHTML = arr.join(", ");
 }
 
 //tổng các số dương
@@ -19,7 +19,7 @@ function sumPositive() {
     }
   }
   //output
-  document.getElementById("positive-sum").innerHTML =
+  document.getElementById("positiveSum").innerHTML =
     "Tổng các số dương: " + sum;
 }
 //đếm các số dương
@@ -32,7 +32,7 @@ function countPositive() {
     }
   }
   //output
-  document.getElementById("positive-count").innerHTML = "Số dương: " + count;
+  document.getElementById("positiveCount").innerHTML = "Số dương: " + count;
 }
 // tìm số nhỏ nhất
 function findMin() {
@@ -56,7 +56,7 @@ function findMinPositive() {
     }
   }
   //output
-  document.getElementById("min-positive").innerHTML =
+  document.getElementById("minPositive").innerHTML =
     "Số dương nhỏ nhất: " + minPositive;
 }
 // tìm số chẵn cuối cùng
@@ -70,16 +70,14 @@ function findLastEven() {
     }
   }
   //output
-  document.getElementById("last-even").innerHTML =
+  document.getElementById("lastEven").innerHTML =
     "Số chẵn cuối cùng: " + lastEven;
 }
 // đổi chỗ 2 số
 function swap() {
   //input = number
-  var position1 =
-    parseInt(document.getElementById("swap-position-1").value) - 1;
-  var position2 =
-    parseInt(document.getElementById("swap-position-2").value) - 1;
+  var position1 = parseInt(document.getElementById("swapPosition1").value) - 1;
+  var position2 = parseInt(document.getElementById("swapPosition2").value) - 1;
   var temp = arr[position1];
   //xử lý
   arr[position1] = arr[position2];
@@ -93,7 +91,7 @@ function sortAscending() {
   var sortedArr = [...arr];
   sortedArr.sort((a, b) => a - b);
   //output
-  document.getElementById("sorted-array").innerHTML =
+  document.getElementById("sortedArray").innerHTML =
     "Mảng đã sắp xếp: " + sortedArr.join(", ");
 }
 // tìm số nguyên đầu tiên
@@ -119,31 +117,8 @@ function findPrime() {
     }
   }
   //output
-  document.getElementById("first-prime").innerHTML =
+  document.getElementById("firstPrime").innerHTML =
     "Số nguyên tố đầu tiên: " + firstPrime;
-}
-//so sánh số âm và số dương
-function countPosNeg() {
-  //xử lý
-  var posCount = 0;
-  var negCount = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      posCount++;
-    } else if (arr[i] < 0) {
-      negCount++;
-    }
-  }
-  var message;
-  if (posCount > negCount) {
-    message = "Có nhiều số dương hơn";
-  } else if (posCount < negCount) {
-    message = "Có nhiều số âm hơn";
-  } else {
-    message = "Số lượng số dương và số âm bằng nhau";
-  }
-  //output
-  document.getElementById("pos-neg-count").innerHTML = message;
 }
 var numbers = [];
 //đếm số ngyên
@@ -175,5 +150,29 @@ function renderNumberList() {
     list += numbers[i] + " ";
   }
   //output
-  document.getElementById("numberList").innerHTML = list;
+  document.getElementById("numberList2").innerHTML = list;
+}
+
+//so sánh số âm và số dương
+function countPosNeg() {
+  //xử lý
+  var posCount = 0;
+  var negCount = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      posCount++;
+    } else if (arr[i] < 0) {
+      negCount++;
+    }
+  }
+  var message;
+  if (posCount > negCount) {
+    message = "Có nhiều số dương hơn";
+  } else if (posCount < negCount) {
+    message = "Có nhiều số âm hơn";
+  } else {
+    message = "Số lượng số dương và số âm bằng nhau";
+  }
+  //output
+  document.getElementById("posNegCount").innerHTML = message;
 }
