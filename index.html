@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <div class="container" style="padding: 50px; background-color: antiquewhite; margin-bottom: 10px;">
+	<div>
+		<label for="input-number">Nhập số nguyên N:</label>
+		<input type="number" id="input-number" />
+		<button onclick="addNumber()">Thêm số</button>
+		<span style="display: block; width: 500px; background-color: aliceblue;" id="number-list"></span>
+	  </div>
+  
+	  
+  
+	  <div>
+		<button onclick="sumPositive()">Tổng các số dương</button>
+		<span id="positive-sum"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="countPositive()">Đếm số dương</button>
+		<span id="positive-count"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="findMin()">Tìm số nhỏ nhất</button>
+		<span id="min"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="findMinPositive()">Tìm số dương nhỏ nhất</button>
+		<span id="min-positive"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="findLastEven()">Tìm số chẵn cuối cùng</button>
+		<span id="last-even"></span>
+	  </div>
+  
+	  <div>
+		<label for="swap-position-1">Vị trí 1:</label>
+		<input type="number" id="swap-position-1" />
+		<label for="swap-position-2">Vị trí 2:</label>
+		<input type="number" id="swap-position-2" />
+		<button onclick="swap()">Đổi chỗ 2 giá trị</button>
+		<span id="swapNum"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="sortAscending()">Sắp xếp tăng dần</button>
+		<span id="sorted-array"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="findPrime()">Tìm số nguyên tố đầu tiên</button>
+		<span id="first-prime"></span>
+	  </div>
+	  <div>
+		<label>Nhập số nguyên:</label>
+		<input type="text" id="numberInput" />
+  
+		<button onclick="addNumber2()">Thêm số</button>
+  
+		<br />
+  
+		<label>Danh sách các số:</label>
+		<div id="numberList"></div>
+  
+		<br />
+  
+		<button onclick="countIntegers()">Đếm số nguyên</button>
+  
+		<br />
+  
+		<label>Số nguyên:</label>
+		<span id="integerCount"></span>
+	  </div>
+  
+	  <div>
+		<button onclick="countPosNeg()">
+		  So sánh số lượng số dương và số âm
+		</button>
+		<span id="pos-neg-count"></span>
+	  </div>
+   </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
